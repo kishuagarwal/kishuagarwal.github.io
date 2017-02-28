@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "What everyone should know about Unicode"
+date:   2017-02-27 22:56:08 +0530
+tags: unicode ascii character-set
+---
+
+I will try to explain in this article what is Unicode and why it is important for you to know about it.
+
+### But, first some background?
+Computers don't understand characters. They understand numbers. So, all the characters are basically numbers to computers. Now the question arises, Which number is assigned to which character. This is where encoding schemes comes into picture.
+
+One of the most popular encoding schemes that was developed in around 1960's and is still widely used is [ASCII][ASCII]. ASCII is a 7 bit encoding scheme which maps characters to 7 bit code. For example, capital A in English is encoded as 65 in ASCII.
+
+Similarly, other characters in english, control characters, punctuations characters were mapped to some 7 bit numbers.
+
+Things were fine if english is the only language in the whole world, but as we all know that is not the case. ASCII is a 7 bit encoding scheme, which means it can encodes only 128 unique characters. But what about characters in Russian, Chinese and other languages. If someone in Russia has to write a document in Russian, he won't be able to use the ASCII since, ASCII doesn't have the mapping for the Russian characters.
+
+Russian people started using [KOI][KOI] encoding which supported the Russian characters. But these documents when sent to people who use ASCII as their encoding scheme, would see gibberish. The reason being ASCII would try to read 65 as an A, but actually 65 is supposed to mean some other character in KOI encoding scheme.
+
+Problems doesn't end here only. Chinese language has more than 128 characters, which can't be represented in 7 bit code, and thus complicating the issue further.
+
+### Unicode to the rescue?
+Unicode Standard was developed to resolve this issue arising from different encodings and there incompatibility between each other.
+
+Unicode is nothing but a simple mapping from characters to numbers. Unicode maps all of the characters in every language known to human beings even [Klingon][KLINGON] to some number( called Code Points). Unicode even maps [emojis][EMOJIS](Really!).
+
+But Unicode is not a encoding scheme like an ASCII and KOI are. Unicode mapping of charactes to numbers are more of a abstract kind of mapping. They haven't tied these to a particular encoding scheme. To actually save or send an Unicode document, the document has to first saved in some Unicode encoding scheme. Most popular of them being UTF-8.
+
+### UTF-8
+
+
+
+
+[ASCII]: https://en.wikipedia.org/wiki/ASCII
+[KOI]: https://en.wikipedia.org/wiki/KOI_character_encodings
+[EMOJIS]: http://www.unicode.org/charts/PDF/U1F600.pdf
+[KLINGON]: https://en.wikipedia.org/wiki/Klingon

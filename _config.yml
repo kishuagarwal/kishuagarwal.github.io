@@ -19,22 +19,19 @@ description: > # this means to ignore newlines until "baseurl:"
   Written with passion
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  kishuagarwal
-
 exclude:
   - Gemfile
   - Gemfile.lock
 
 github:
-  url:               "https://lenpaul.github.io/Lagrange"
+  url:               "http://localhost:4000"
 author:
-  name:              "Paul Le"
-  email:             "l.nguyen.paul@gmail.com"
-  twitter:           "paululele"
-  instagram:         "paululele"
-  github:            "lenpaul"
-  facebook:          "Le.Paul.94"
-  linkedin:          "lenpaul"
+  name:              "Kishu Agarwal"
+  email:             "kishu.agarwal1@gmail.com"
+  twitter:           "Agarwal1Kishu"
+  github:            "kishuagarwal"
+  facebook:          "kishuagarwal"
+  linkedin:          "kishu-agarwal-5045359b"
 paginate:            5
 
 
