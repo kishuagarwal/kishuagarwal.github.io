@@ -21,11 +21,25 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  kishuagarwal
 
-# Build settings
-markdown: kramdown
-theme: minima
-gems:
-  - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
+
+github:
+  url:               "https://lenpaul.github.io/Lagrange"
+author:
+  name:              "Paul Le"
+  email:             "l.nguyen.paul@gmail.com"
+  twitter:           "paululele"
+  instagram:         "paululele"
+  github:            "lenpaul"
+  facebook:          "Le.Paul.94"
+  linkedin:          "lenpaul"
+paginate:            5
+
+
+# Build settings
+markdown:            kramdown
+highlighter:         rouge
+permalink:           none
+gems:                [jekyll-paginate]
