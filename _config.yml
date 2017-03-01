@@ -24,7 +24,7 @@ exclude:
   - Gemfile.lock
 
 github:
-  url:               "https://kishuagarwal.github.io/"
+  url:               "https://kishuagarwal.github.io"
 author:
   name:              "Kishu Agarwal"
   email:             "kishu.agarwal1@gmail.com"
