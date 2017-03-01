@@ -20,7 +20,7 @@ Russian people started using [KOI][KOI] encoding which supported the Russian cha
 
 Problems doesn't end here only. Chinese language has more than 128 characters, which can't be represented in 7 bit code, and thus complicating the issue further.
 
-### Unicode to the rescue?
+### Unicode to the rescue
 Unicode Standard was developed to resolve this issue arising from different encodings and there incompatibility between each other.
 
 Unicode is nothing but a simple mapping from characters to numbers. Unicode maps all of the characters in every language known to human beings even [Klingon][KLINGON] to some number( called Code Points). Unicode even maps [emojis][EMOJIS](Really!).
