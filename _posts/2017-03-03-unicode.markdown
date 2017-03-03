@@ -36,7 +36,7 @@ To actually store or send a document comprising of Unicode characters, the docum
 UTF-8 is by far, the most commonly used Unicode encoding scheme. 8 in the UTF-8 denotes the fact the this encoding uses 8-bit bytes as the basis for encoding. Unlike the above encoding schemes which uses fixed number of bytes to encode characters, UTF-8 is a variable multi-byte encoding scheme.
 
 Now let's understand how UTF-8 encoding works. UTF-8 uses the below table for encoding the unicode characters-
-<img src="/assets/images/utf8-encoding-table.png"/>
+<img src="/assets/images/utf8-encoding-table.png" style="display: block; margin: 10px auto" />
 
 If you are having trouble in understanding the assignment of the codepoints, then let me explain this with a quick example. Suppose you have to encode the  unicode character Ω with code point **U+03A9**. (**U+** is commonly used to denote the unicode code points)
 
