@@ -18,13 +18,11 @@ email: kishu.agarwal1@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Written with passion
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://kishuagarwal.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 exclude:
   - Gemfile
   - Gemfile.lock
 
-site:
-  url:               "https://kishuagarwal.github.io"
 github:
   url:               ""
 author:
