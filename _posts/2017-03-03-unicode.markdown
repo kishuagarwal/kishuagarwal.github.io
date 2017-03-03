@@ -27,16 +27,32 @@ Unicode is nothing but a simple mapping from characters to numbers. Unicode maps
 
 But here is one very crucial point about Unicode. Unicode doesn't just map characters to numbers which will be actually used while storing or sending files. Unicode maps characters to numbers which are more of abstract kind of a mapping. These numbers are called `Code Points`. 
 
-`Code Points` are useful because they are kind of a identification of a character without taking into account any visual distinction or encoding. This essentially means that the english character A is assigned some number and it doesn't depend on how any machine renders that character or how it decides to encode that character. So this serves as the basis of identifying some particular character.
+`Code Points` are useful because they are kind of a identification of a character without taking into account any visual distinction or encoding. This essentially means that the english character A is assigned some number and that number is not linked to any particular glyph for that character or any particular encoding scheme.
 
-
-To actually store or send a document comprising of Unicode characters, the document has to be first encoded using one of the Unicode encoding schemes. Over the years many Unicode encoding schemes have came.
-UTF-8 is the most popular one.
-
+To actually store or send a document comprising of Unicode characters, the document has to be first encoded using one of the Unicode encoding schemes. Over the years many Unicode encoding schemes have came. I have described some of the most popular ones.
 
 ### UTF-8
-    
 
+UTF-8 is by far, the most commonly used Unicode encoding scheme. 8 in the UTF-8 denotes the fact the this encoding uses 8-bit bytes as the basis for encoding. Unlike the above encoding schemes which uses fixed number of bytes to encode characters, UTF-8 is a variable multi-byte encoding scheme.
+
+Now let's understand how UTF-8 encoding works. UTF-8 uses the below table for encoding the unicode characters-
+<img src="/assets/images/utf8-encoding-table.png"/>
+
+If you are having trouble in understanding the assignment of the codepoints, then let me explain this with a quick example. Suppose you have to encode the  unicode character Ω with code point **U+03A9**. (**U+** is commonly used to denote the unicode code points)
+
+<img src="/assets/images/utf-8-example.png" style="display: block; margin: 10px auto">
+
+This unicode character lies in the second row of the table and thus 2 bytes would be used for this character. Out of the 16 bits, 3 bits in the first byte and 2 bits in the second byte are already filled by the encoding. And the remaining 11 bits are filled by using the 11 bits of the code point. Thus giving the final encoding of `CE A9`.
+
+You may be wondering why there are some reserved bits in the table above. Why just don't use the all the available bits?. Well, there is a reason for that. 
+- The number of 1 bits in the first byte denotes the number of bytes used for this character. Extra `0` bit serves the purpose of delimiting. In the example above, since the number of bytes were 2, so the first byte high-order bits were set to `110`.
+- Each continuation byte is denoted by a `10` in the high order bits.
+
+Having these extra bits, gives UTF-8 some useful properties-
+- It is very easy to see just from a single byte, whether it is a single byte (starting from `0`), leading byte of a multibyte sequence (starting from `11`), or a continuation byte in a multibyte sequence (starting from `10`)
+- It gives clear indication of the number of bytes for a multibyte sequence. Simply lookup the number of 1's in the leading byte.
+
+Unicode uses the same value for its code points as the ASCII encoding for the first 128 characters. UTF-8 exploits this fact to store these characters as it is, in a 1 byte, and thus ensuring that all ASCII documents are valid UTF-8 documents without any extra modification. And this also means that all the old `C` functions and programs and other parsers which assume ASCII as the encoding scheme would continue to run just fine if they are passed the UTF-8 encoded text, assuming of course that the characters are just from the range 0 to 127.
 
 
 [ASCII]: https://en.wikipedia.org/wiki/ASCII
