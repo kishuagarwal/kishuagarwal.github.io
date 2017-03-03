@@ -23,6 +23,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
+site:
+  url:               "https://kishuagarwal.github.io"
 github:
   url:               ""
 author:
