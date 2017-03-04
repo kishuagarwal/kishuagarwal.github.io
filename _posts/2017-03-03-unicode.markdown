@@ -2,6 +2,7 @@
 layout: post
 title:  "What everyone should know about Unicode"
 date:   2017-02-27 22:56:08 +0530
+comments: true
 tags: unicode ascii character-set
 meta:
     description: "What is Unicode and why every programmer should know about them"
