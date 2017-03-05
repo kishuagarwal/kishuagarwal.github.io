@@ -81,6 +81,11 @@ To solve this byte-order issue, UTF-16 uses something which is called **Byte-Ord
 
 Now if this codepoint is also sent with the character Ω from a big-endian machine to a little-endian machine, the little-endian machine would receive the bytes in the order, `0xFEFF03A9` and would intrepret them in the reverse order as `0xFFFEA903`. Now the parser on the little-endian machine seeing the character **U+FFFE** (which is also reserved by the Unicode solely for this purpose), knows that it has to reverse the byte-order of the rest of the characters and thus correctly reads the next pair of bytes as `0x03A9`.
 
+### Conclusion
+
+Knowing about Unicode and different types of encoding like ASCII, UTF-8, UTF-16 will really help you a lot in solving problems arising due to incorrect usage of them. It will also be a step toward making your programs truly accessible to global audience who use different langauge than you use.
+
+Thank you for reading my article. Let me know if you liked my article or any other suggestions for me, in the comments section below. And please, feel free to share :)
 
 
 [ASCII]: https://en.wikipedia.org/wiki/ASCII
