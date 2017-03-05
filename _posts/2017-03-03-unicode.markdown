@@ -33,7 +33,7 @@ But here is one very crucial point about Unicode. Unicode doesn't just map chara
 
 `Code Points` are useful because they are kind of a identification of a character without taking into account any visual distinction or encoding. This essentially means that the english character A is assigned some number and that number is not linked to any particular glyph for that character or any particular encoding scheme.
 
-To actually store or send a document comprising of Unicode characters, the document has to be first encoded using one of the Unicode encoding schemes. Over the years many Unicode encoding schemes have came. I have described some of the most popular ones.
+To actually store or send a document comprising of Unicode characters, the document has to be first encoded using one of the Unicode encoding schemes. Over the years many Unicode encoding schemes have came. I have described two of the most popular ones.
 
 ### UTF-8
 
@@ -71,8 +71,16 @@ The way UTF-16 encodes characters is as follows-
 UTF-16 divides these range into two buckets `0xD800...0xDBFF` and `0xDC00...0xDFFF` (let's call them `A`and `B` ) where each bucket has 10 free bits and 6 fixed bits(shown in grey in the image). The 20-bit number that we got above after subracting, is now divided into two parts of 10-bit each. The first 10-bits are used to the fill the 10 free bits of  `A` while the remaining 10-bits are used to fill the 10 free bits of `B`.
 These pairs `A` and `B` are called surrogate pairs of each other. `A` is the high surrogate and `B` is the low surrogate. This `AB` is the final encoding.
 
-And this how UTF-16 encoding works.
+And this how UTF-16 encoding works. There is one issue with UTF-16 that you should know about. And that is of byte order. UTF-8 is a byte-oriented scheme so it doesn't matter whether the machine is [big-endian][ENDIANESS] or [little-endian][ENDIANESS]. But it matters in the case of UTF-16 since it is word (2-byte) oriented scheme. 
 
+Suppose that we have to store the  UTF-16 encoding for the unicode character Ω(**U+03A9**) which is 2 byte `0x03A9` (See the first point above to check how we got this). If the machine on which we are working on is Big-Endian, the bytes would be stored in the same order, `0x03A9`, but if we are working on Little-Endian machine, the bytes would be stored in the reverse order, `0xA903`. As long as you keep working on the same machine, everything is fine. It doesn't matter which type machine is. But as soon as you want to send the file to someone else, who has different type of endian-ness on his machine, things start to break down. 
+
+If you send the same character Ω from a big-endian machine to a little-endian machine, the little-endian machine would get the bytes as `0x03A9` and would intrepret them as bytes in reverse order `0xA903`, which stands for the unicode character ꤃.
+
+To solve this byte-order issue, UTF-16 uses something which is called **Byte-Order Mark(BOM)**. While saving a UTF-16 document, an additional unicode codepoint with the value 
+**U+FEFF** is stored before the actual first codepoint. This codepoint gives the hint to parser of the document, whether the document is stored in the big-endian or little-endian format.
+
+Now if this codepoint is also sent with the character Ω from a big-endian machine to a little-endian machine, the little-endian machine would receive the bytes in the order, `0xFEFF03A9` and would intrepret them in the reverse order as `0xFFFEA903`. Now the parser on the little-endian machine seeing the character **U+FFFE** (which is also reserved by the Unicode solely for this purpose), knows that it has to reverse the byte-order of the rest of the characters and thus correctly reads the next pair of bytes as `0x03A9`.
 
 
 
@@ -80,3 +88,4 @@ And this how UTF-16 encoding works.
 [KOI]: https://en.wikipedia.org/wiki/KOI_character_encodings
 [EMOJIS]: http://www.unicode.org/charts/PDF/U1F600.pdf
 [KLINGON]: https://en.wikipedia.org/wiki/Klingon
+[ENDIANESS]: https://en.wikipedia.org/wiki/Endianness
