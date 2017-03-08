@@ -59,7 +59,7 @@ By default, unicode function uses the python default encoding scheme which is us
     print sys.getdefaultencoding()
 {% endhighlight %}
 
-You should never change this default encoding since many other programs and modules rely on this default behaviour and may break if you change it something else. You should instead pass your desired encoding as the argument to the unicode function.
+You should never change this default encoding since many other programs and modules rely on this default behaviour and may break if you change it to something else. You should instead pass your desired encoding as the argument to the unicode function.
 
 {% highlight python %}
     str_type_string = 'omega\xce\xa9'
@@ -76,7 +76,7 @@ In the example above, the encoding argument specifies the encoding of the input 
 {% endhighlight %}
 
 
-Finally to conver the unicode string back into normal `str` or byte string, use the decode counterpart function encode.
+Finally to convert the unicode string back into normal `str` or byte string, use the decode counterpart function encode.
 
 {% highlight python %}
     unicode_string = u'\u03a9'
