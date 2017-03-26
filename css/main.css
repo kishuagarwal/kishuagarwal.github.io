@@ -447,3 +447,9 @@ pre {
 .fa-codepen:hover {
 	color: black;
 }
+
+
+svg {
+  display: block;
+  margin: auto;
+}
