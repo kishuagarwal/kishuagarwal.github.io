@@ -105,7 +105,7 @@ blockquote p {
 
 @media (max-width: 1366px) {
   .container {
-    width: 45vw;
+    width: 60vw;
   }
 }
 
@@ -160,7 +160,7 @@ blockquote p {
   margin-bottom: 1rem;
   color: #9a9a9a;
   font-family: 'Quattrocento Sans', sans-serif;
-  font-size:0.8rem;
+  font-size: 15px;
 }
 
 @media (max-width: 30rem) {
@@ -448,8 +448,19 @@ pre {
 	color: black;
 }
 
-
 svg {
   display: block;
   margin: auto;
+}
+
+.svg_container {
+  height: 270px;
+}
+
+svg.assembly_stack {
+  position: absolute;
+  left: 0;
+  right: 0;
+  max-height: 330px;
+  widows: 100%;
 }
