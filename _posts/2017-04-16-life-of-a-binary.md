@@ -3,7 +3,7 @@ layout: post
 title:  "Life of a binary"
 date:   2017-04-16 00:00:00 +0530
 tags: binary c object-code machine-code assembly elf
-comments: false
+comments: true
 meta:
     keywords: "c compiler assembly object-code elf-format machine code compilation binary linking loading dynamic-linking plt procedure-linkage-table got global-offset-table how-printf-is-called"
 ---
