@@ -37,6 +37,6 @@ paginate:            5
 
 # Build settings
 markdown:            kramdown
-highlighter:         rouge
+highlighter:         pygments
 permalink:           none
 gems:                [jekyll-paginate, jekyll-sitemap]
