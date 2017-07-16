@@ -5,7 +5,7 @@ date:   2017-02-27 22:56:08 +0530
 comments: true
 tags: unicode ascii character-set
 meta:
-    keywords: "unicode utf-8 character-set character-encoding utf-16 ascii bom byte-order-mark u+fffe u+feff endianness big-endian little-endian what-is-utf8 what-is-utf-16 what-is-unicode"
+    keywords: "unicode, utf-8, character-set, character-encoding, utf-16, ascii, bom, byte-order-mark, u+fffe, u+feff, endianness, big-endian, little-endian, what is utf8, what is utf 16, what is unicode"
 ---
 
 I will try to explain in this article what is Unicode and why it is important for you to know about it.

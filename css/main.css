@@ -444,7 +444,14 @@ pre {
 
 svg {
   display: block;
-  margin: auto;
+  width: 100%;
+  margin: 25px auto;
+}
+
+svg.extend {
+  position:relative;
+  width: 110%;
+  left: -5%;
 }
 
 .svg_container {

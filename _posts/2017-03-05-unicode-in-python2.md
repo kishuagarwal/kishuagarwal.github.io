@@ -5,7 +5,7 @@ date:   2017-03-05 10:56:08 +0530
 tags: unicode ascii character-set python
 comments: true
 meta:
-    keywords: "python2 python-2 python-3 python3 encoding decoding unicode utf-8 character-set character-encoding utf-16 ascii bom byte-order-mark u+fffe u+feff endianness big-endian little-endian what-is-utf8 what-is-utf-16 what-is-unicode"
+    keywords: "python 2 encoding, python 2 decoding, unicode, utf-8, character-set, character encoding,  utf-16, ascii, bom, byte order mark,  u+fffe, u+feff, endianness, big endian, little endian, what is utf8,  what is utf-16, what is unicode"
 ---
 
 If you don't know what is Unicode, UTF-8 or UTF-16 or if need to refresh your memory on these topics, then before reading this article, check this one [What everyone should know about Unicode][Unicode].
