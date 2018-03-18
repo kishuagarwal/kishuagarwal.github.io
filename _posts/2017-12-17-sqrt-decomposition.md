@@ -24,7 +24,7 @@ And all the indexes are $$1$$-based.
 So how can we solve this problem.
 Let's try bruteforce approach. Here is a sample implementation in Python 3.
 
-{% highlight python3 %}
+{% highlight python %}
 n, q = list(map(int, input()s.strip().split(' ')))
 array = list(map(int, input().strip().split(' ')))
 for i in range(q):
@@ -96,7 +96,7 @@ Overall complexity of the algorithm is thus $$O(q\sqrt{n})$$.
 
 
 Here is a sample implementation of the above strategy in Python 3.
-{% highlight python3 %}
+{% highlight python %}
 import math
 n, q = list(map(int, input().strip().split(' ')))
 array = list(map(int, input().strip().split(' ')))
