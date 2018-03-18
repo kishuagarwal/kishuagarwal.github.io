@@ -3,7 +3,7 @@ layout: post
 title:  "Square Root Decomposition"
 date:   2018-03-18 00:00:00 +0530
 tags: competitive-programming sqrt-root decomposition
-comments: false
+comments: true
 meta:
     keywords: "competitive programming, square root decomposition, sqrtroot decomposition"
 ---
