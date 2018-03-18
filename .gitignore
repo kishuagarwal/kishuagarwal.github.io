@@ -3,3 +3,5 @@ _site
 .jekyll-metadata
 future_topics.txt
 .idea/
+blog.sublime-workspace
+blog.sublime-project
