@@ -3,7 +3,7 @@ layout: post
 title:  "Binary Indexed Tree"
 date:   2018-03-25 00:00:00 +0530
 tags: competitive-programming fenwick-tree binary-indexed-tree bit
-comments: false
+comments: true
 meta:
     keywords: "competitive programming, binary indexed tree, bit, fenwick tree"
 ---
