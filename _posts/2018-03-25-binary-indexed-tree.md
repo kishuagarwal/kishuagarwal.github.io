@@ -70,8 +70,6 @@ For handling queries of type $$1$$, where we have to update the element at index
 
 Here, we have shown sums for $$3$$ positions, $$2$$, $$4$$ and $$8$$. We want to change the value of element at position $$2$$ from $$3$$ to $$5$$. In the naive approach from above, after changing the value of the element in the original array, we would have recomputed the prefix sums for whole of the positions in the prefix array. But in our new approach, we would only have to change the value of $$3$$ positions. Why these $$3$$ only?
 
-Binary representation of $$2$$ is $$10$$.
-
 We would definitely would have to change the value at position $$2$$ since it covers index 2 of our original array. To maintain the integrity of the sums stored in all the other indices in our **bit_tree**, we would also have to change all those values which were calculated using the value at index $$2$$ in our original array. And how can we figure out those indices?
 
 Before answering that question, let's consider another problem. Given a number $$x$$, how can we quickly find the last set bit of that number.
