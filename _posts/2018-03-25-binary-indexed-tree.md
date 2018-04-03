@@ -145,7 +145,7 @@ Instead of storing sum of array values directly, we can only store whether the n
 To handle query of type 1, we can simply check whether the updated value is odd or not. If the updated value is odd, then we can simply update the corresponding index by 1, else we would have to decrease the index by 1 (or in other words, increase it by -1). 
 
 
-Now queries of type 2 are more interesting. How can we find the $$k^{th}$$ odd number? Here we can use binary search over **bit_tree** for **k**. We can use binary search here, because **bit_tree** satisfies the two conditions of applying binary search. The data in **bit_tree** is sorted in increasing order of count of odd numbers found. And for any **k**, there exists a index for which all the indices to the left of it, would have odd number count less than it and all the indices to the right, would have odd number count greater than it.
+Now queries of type 2 are more interesting. How can we find the $$k^{th}$$ odd number? Here we can use binary search over **bit_tree** for **k**. We can use binary search here, because **bit_tree** satisfies the two conditions of applying binary search. The data in **bit_tree** is sorted in increasing order of count of odd numbers found. And for any **k**, there exists a index for which all the indices to the left of it, would have odd number count less than it and all the indices to the right, would have odd number count greater than or equal to it.
 
 Here is a my sample implementation in Python 3.
 
