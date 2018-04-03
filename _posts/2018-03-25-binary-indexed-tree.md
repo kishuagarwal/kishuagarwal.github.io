@@ -73,11 +73,11 @@ Here, we have shown sums for $$3$$ positions, $$2$$, $$4$$ and $$8$$. We want to
 We would definitely would have to change the value at position $$2$$ since it covers index 2 of our original array. To maintain the integrity of the sums stored in all the other indices in our **bit_tree**, we would also have to change all those values which were calculated using the value at index $$2$$ in our original array. And how can we figure out those indices?
 
 Before answering that question, let's consider another problem. Given a number $$x$$, how can we quickly find the last set bit of that number.
-Let's represent the number $$x$$ in binary as **$$s1t$$** where $$1$$ represents the last set bit, $$t$$ representing sequence of zero or more $$0$$'s at the end and $$s$$ representing the start of the number. Let's add $$-x$$ to $$x$$. $$-x$$ would be just $$1$$ added to the $$1$$-complement of $$x$$.
+Let's represent the number $$x$$ in binary as **$$s1t$$** where $$1$$ represents the last set bit, $$t$$ representing sequence of zero or more $$0$$'s at the end and $$s$$ representing the start of the number. Let's take bitwise $$\&$$ of $$x$$ and $$-x$$. $$-x$$ would be just $$1$$ added to the $$1$$-complement of $$x$$.
 
 $$-x = 1 + \overline{s1t} = 1 + \overline{s}0{111...1} = \overline{s}1t$$
 
-And now take bitwise $$\&$$ of $$x$$ and $$-x$$.
+And bitwise $$\&$$ of $$x$$ and $$-x$$ would be now,
 
 $$x \, \& \, -x = s1t \, \& \, \overline{s}1t = 1t $$
 
