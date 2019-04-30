@@ -9,7 +9,7 @@ meta:
 ---
 
 
-Almost every one of you must have written a program, compiled it and then ran it to see the fruits of your hard labour. It feels good to finally see your program working, isn't it? But to make all of this work, we have someone else to thankful too. And that is your compiler (of course, assuming that you are working in a compiled language,not an interpreted one) which also does so much hard work behind the scenes.
+Almost every one of you must have written a program, compiled it and then ran it to see the fruits of your hard labour. It feels good to finally see your program working, isn't it? But to make all of this work, we have someone else to thankful too. And that is your compiler (of course, assuming that you are working in a compiled language, not an interpreted one) which also does so much hard work behind the scenes.
 
 In this article, I will try to show you how the source code that you write is transformed into something that your machine is actually able to run. I am choosing Linux as my host machine and C as the programming language here, but the concepts here are general enough to apply to many compiled languages out there.
 
