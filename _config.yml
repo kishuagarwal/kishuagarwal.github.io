@@ -40,3 +40,6 @@ markdown:            kramdown
 highlighter:         rouge
 permalink:           none
 gems:                [jekyll-paginate, jekyll-sitemap]
+
+plugins:
+  - jekyll-feed
