@@ -39,4 +39,5 @@ paginate:            5
 markdown:            kramdown
 highlighter:         rouge
 permalink:           none
-gems:                [jekyll-paginate, jekyll-sitemap]
+gems:                [jekyll-paginate, jekyll-sitemap, jekyll-feed]
+
